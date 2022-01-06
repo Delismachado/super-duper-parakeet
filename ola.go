@@ -2,8 +2,13 @@ package main
 
 import "fmt"
 
+const prefixoOlaPortugues = "Olá, "
+
 func Ola(name string) string {
-	return "Olá, " + name
+	if name == "" {
+		name = "mundo"
+	}
+	return prefixoOlaPortugues + name
 }
 func main() {
 	fmt.Println(Ola("outra coisa"))
